@@ -10,7 +10,14 @@ const routes: Routes = [{ path: 'home', loadChildren: () => import('./pages/cust
 { path: 'customer', loadChildren: () => import('./pages/admin/customer/customer.module').then(m => m.CustomerModule) },
 { path: 'staff', loadChildren: () => import('./pages/admin/staff/staff.module').then(m => m.StaffModule) },
 { path: 'room', loadChildren: () => import('./pages/admin/room/room.module').then(m => m.RoomModule) },
-{ path: 'reservation', loadChildren: () => import('./pages/admin/reservation/reservation.module').then(m => m.ReservationModule) }];
+{ path: 'reservation', loadChildren: () => import('./pages/admin/reservation/reservation.module').then(m => m.ReservationModule) }
+{ path: 'login', loadChildren: () => import('./pages/admin/login/login.module').then(m => m.LoginModule) },
+{ path: 'reservation-detail', loadChildren: () => import('./pages/admin/reservation-detail/reservation-detail.module').then(m => m.ReservationDetailModule) },
+{ path: 'service-hotel', loadChildren: () => import('./pages/admin/service-hotel/service-hotel.module').then(m => m.ServiceHotelModule) },
+{ path: 'add-staff', loadChildren: () => import('./pages/admin/add-staff/add-staff.module').then(m => m.AddStaffModule) },
+{ path: 'edit-staff', loadChildren: () => import('./pages/admin/edit-staff/edit-staff.module').then(m => m.EditStaffModule) },
+{ path: 'dashboard', loadChildren: () => import('./pages/admin/dashboard/dashboard.module').then(m => m.DashboardModule) }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
