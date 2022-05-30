@@ -33,7 +33,16 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/doc/js/tool.js",
+              "src/assets/doc/js/jquery-3.2.1.min.js",
+              "src/assets/doc/js/popper.min.js",
+              "src/assets/doc/js/bootstrap.min.js",
+              "src/assets/doc/js/main.js",
+              "src/assets/doc/js/plugins/pace.min.js",
+              "src/assets/doc/js/plugins/jquery.dataTables.min.js",
+              "src/assets/doc/js/plugins/dataTables.bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
