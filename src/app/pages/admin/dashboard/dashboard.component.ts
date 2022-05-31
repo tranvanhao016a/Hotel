@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { Chart } from 'node_modules/chart.js';
+
 declare const lineChartDemo: any;
 declare const barChartDemo: any;
 @Component({
@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
   }
- 
+
 
   public data = {
     labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
