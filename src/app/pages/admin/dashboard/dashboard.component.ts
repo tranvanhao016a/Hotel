@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { Chart } from 'node_modules/chart.js';
+// import { Chart } from 'node_modules/chart.js';
 declare const lineChartDemo: any;
 declare const barChartDemo: any;
 @Component({
