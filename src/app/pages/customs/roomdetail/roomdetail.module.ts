@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RoomdetailRoutingModule } from './roomdetail-routing.module';
 import { RoomdetailComponent } from './roomdetail.component';
-
+import { SharedModule } from 'src/app/shared/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { RoomdetailComponent } from './roomdetail.component';
   ],
   imports: [
     CommonModule,
-    RoomdetailRoutingModule
+    RoomdetailRoutingModule,
+    SharedModule
   ]
 })
 export class RoomdetailModule { }

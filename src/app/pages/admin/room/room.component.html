@@ -5,7 +5,7 @@
       <main class="app-content">
           <div class="app-title">
               <ul class="app-breadcrumb breadcrumb side">
-                  <li class="breadcrumb-item active"><a href="#"><b>Danh sách phòng</b></a></li>
+                  <li class="breadcrumb-item active"><a href="#"><b>Room list</b></a></li>
               </ul>
               <div id="clock"></div>
           </div>
@@ -16,7 +16,7 @@
                         <div class="row element-button">
                             <div class="col-sm-2">
                               <a class="btn btn-add btn-sm" href="form-add-nhan-vien.html" title="Thêm"><i class="fas fa-plus"></i>
-                                Tạo mới phòng</a>
+                                Add new room</a>
                             </div>
                           </div>
                           <div id="sampleTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
@@ -34,13 +34,13 @@
                                   <tr role="row">
                                     <th width="10" class="sorting_asc" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending" style="width: 13px;">
                                     <input type="checkbox" id="all" onclick="checkbox()"></th>
-                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Mã phòng: activate to sort column ascending" style="width: 107px;">Mã phòng</th>
-                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Ảnh: activate to sort column ascending" style="width: 126px;">Ảnh</th>
-                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Số khách tối đa: activate to sort column ascending" style="width: 73px;">Số khách tối đa</th>
-                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Tình trạng: activate to sort column ascending" style="width: 83px;">Tình trạng</th>
-                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Giá tiền: activate to sort column ascending" style="width: 104px;">Giá tiền</th>
-                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Loại phòng: activate to sort column ascending" style="width: 134px;">Loại phòng</th>
-                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Chức năng: activate to sort column ascending" style="width: 90px;">Chức năng</th>
+                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Mã phòng: activate to sort column ascending" style="width: 107px;">Room code</th>
+                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Ảnh: activate to sort column ascending" style="width: 126px;">Image</th>
+                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Số khách tối đa: activate to sort column ascending" style="width: 73px;">Maximum number of guests</th>
+                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Tình trạng: activate to sort column ascending" style="width: 83px;">Status</th>
+                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Giá tiền: activate to sort column ascending" style="width: 104px;">Price</th>
+                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Loại phòng: activate to sort column ascending" style="width: 134px;">Kind of room</th>
+                                    <th class="sorting" tabindex="0" aria-controls="sampleTable" rowspan="1" colspan="1" aria-label="Chức năng: activate to sort column ascending" style="width: 90px;">Feature</th>
                                   </tr>
                               </thead>
                               <tbody>
@@ -49,7 +49,7 @@
                                       <td>201</td>
                                       <td><img src="../../../../assets/img-phong/phong-standard.jpg" alt="" width="100px;"></td>
                                       <td>4</td>
-                                      <td><span class="badge bg-danger">Đã thuê</span></td>
+                                      <td><span class="badge bg-danger">Rent</span></td>
                                       <td>1.800.000 đ</td>
                                       <td>Standard</td>
                                       <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
@@ -61,7 +61,7 @@
                                       <td>202</td>
                                       <td><img src="../../../../assets/img-phong/phong-junior-suite.jpg" alt="" width="100px;"></td>
                                       <td>4</td>
-                                      <td><span class="badge bg-danger">Đã thuê</span></td>
+                                      <td><span class="badge bg-danger">Rent</span></td>
                                       <td>1.900.000 đ</td>
                                       <td>Deluxe</td>
                                       <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
@@ -73,113 +73,16 @@
                                       <td>203</td>
                                       <td><img src="../../../../assets/img-phong/phong-superior.jpg" alt="" width="100px;"></td>
                                       <td>6</td>
-                                       <td><span class="badge bg-success">Còn trống</span></td>
+                                       <td><span class="badge bg-success">Room Available</span></td>
                                       <td>3.235.000 đ</td>
                                       <td>Suite</td>
                                       <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
                                           </button>
                                           <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
                                       </td>
-                                  <!-- </tr><tr role="row" class="even">
-                                      <td width="10" class="sorting_1"><input type="checkbox" name="check1" value="1"></td>
-                                      <td>72638003</td>
-                                      <td>Ghế ăn gỗ Theresa</td>
-                                      <td><img src="/img-sanpham/ghethera.jpg" alt="" width="100px;"></td>
-                                      <td>50</td>
-                                       <td><span class="badge bg-success">Còn hàng</span></td>
-                                      <td>950.000 đ</td>
-                                      <td>Ghế gỗ</td>
-                                      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                                          </button>
-                                          <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button> 
-                                      </td>
-                                  </tr><tr role="row" class="odd">
-                                      <td width="10" class="sorting_1"><input type="checkbox" name="check1" value="1"></td>
-                                      <td>72109004</td>
-                                      <td>Ghế làm việc Zuno</td>
-                                      <td><img src="/img-sanpham/zuno.jpg" alt="" width="100px;"></td>
-                                      <td>50</td>
-                                       <td><span class="badge bg-success">Còn hàng</span></td>
-                                      <td>3.800.000 đ</td>
-                                      <td>Ghế gỗ</td>
-                                      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                                          </button>
-                                          <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                                         
-                                      </td>
-                                  </tr><tr role="row" class="even">
-                                      <td width="10" class="sorting_1"><input type="checkbox" name="check1" value="1"></td>
-                                      <td>82716001</td>
-                                      <td>Ghế ăn Vitali</td>
-                                      <td><img src="/img-sanpham/vita.jpg" alt="" width="100px;"></td>
-                                      <td>55</td>
-                                       <td><span class="badge bg-success">Còn hàng</span></td>
-                                      <td>4.600.000 đ</td>
-                                      <td>Ghế gỗ</td>
-                                      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                                          </button>
-                                          <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                                          
-                                      </td>
-                                  </tr><tr role="row" class="odd">
-                                      <td width="10" class="sorting_1"><input type="checkbox" name="check1" value="1"></td>
-                                      <td>72109001</td>
-                                      <td>Ghế ăn gỗ Lucy màu trắng</td>
-                                      <td><img src="/img-sanpham/lucy.jpg" alt="" width="100px;"></td>
-                                      <td>38</td>
-                                       <td><span class="badge bg-success">Còn hàng</span></td>
-                                      <td>1.100.000 đ</td>
-                                      <td>Ghế gỗ</td>
-                                      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                                          </button>
-                                          <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i> </button>
-                                      
-                                      </td>
-                                  </tr><tr role="row" class="even">
-                                      <td width="10" class="sorting_1"><input type="checkbox" name="check1" value="1"></td>
-                                      <td>71304041</td>
-                                      <td>Bàn ăn mở rộng Vegas</td>
-                                      <td><img src="/img-sanpham/vegas.jpg" alt="" width="100px;"></td>
-                                      <td>80</td>
-                                       <td><span class="badge bg-success">Còn hàng</span></td>
-                                      <td>21.550.000 đ</td>
-                                      <td>Bàn thông minh</td>
-                                      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                                          </button>
-                                          <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                                        
-                                      </td>
-                                  </tr><tr role="row" class="odd">
-                                      <td width="10" class="sorting_1"><input type="checkbox" name="check1" value="1"></td>
-                                      <td>71304037</td>
-                                      <td>Bàn ăn mở rộng Gepa</td>
-                                      <td><img src="/img-sanpham/banan.jpg" alt="" width="100px;"></td>
-                                      <td>80</td>
-                                       <td><span class="badge bg-success">Còn hàng</span></td>
-                                      <td>16.770.000 đ</td>
-                                      <td>Bàn thông minh</td>
-                                      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                                          </button>
-                                          <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                                         
-                                      </td>
-                                  </tr><tr role="row" class="even">
-                                      <td width="10" class="sorting_1"><input type="checkbox" name="check1" value="1"></td>
-                                      <td>71304032</td>
-                                      <td>Bàn ăn mặt gốm vân đá Cera</td>
-                                      <td><img src="/img-sanpham/cera.jpg" alt="" width="100px;"></td>
-                                      <td>46</td>
-                                       <td><span class="badge bg-success">Còn hàng</span></td>
-                                      <td>20.790.000 đ</td>
-                                      <td>Bàn thông minh</td>
-                                      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                                          </button>
-                                          <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i></button>
-                                        
-                                      </td>
-                                  </tr>-->
+                                 
                                 </tbody> 
-                          </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="sampleTable_info" role="status" aria-live="polite">Hiện 1 đến 10 của 16 danh mục</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="sampleTable_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="sampleTable_previous"><a href="#" aria-controls="sampleTable" data-dt-idx="0" tabindex="0" class="page-link">Lùi</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="sampleTable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="sampleTable" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item next" id="sampleTable_next"><a href="#" aria-controls="sampleTable" data-dt-idx="3" tabindex="0" class="page-link">Tiếp</a></li></ul></div></div></div></div>
+                          </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="sampleTable_info" role="status" aria-live="polite">Showing 1 to 10 of 16 categories</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="sampleTable_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="sampleTable_previous"><a href="#" aria-controls="sampleTable" data-dt-idx="0" tabindex="0" class="page-link">Back</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="sampleTable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="sampleTable" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item next" id="sampleTable_next"><a href="#" aria-controls="sampleTable" data-dt-idx="3" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
                       </div>
                   </div>
               </div>
@@ -193,58 +96,55 @@
         <div class="row">
           <div class="form-group  col-md-12">
             <span class="thong-tin-thanh-toan">
-              <h5>Chỉnh sửa thông tin sản phẩm cơ bản</h5>
+              <h5>Edit basic room information</h5>
             </span>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-              <label class="control-label">Mã sản phẩm </label>
-              <input class="form-control" type="number" value="71309005">
+              <label class="control-label">Room code </label>
+              <input class="form-control" type="number" value="201">
             </div>
           <div class="form-group col-md-6">
-              <label class="control-label">Tên sản phẩm</label>
-            <input class="form-control" type="text" required="" value="Bàn ăn gỗ Theresa">
+              <label class="control-label">Image</label>
+            <input class="form-control" type="text" required="" value="Family's room">
           </div>
-          <div class="form-group  col-md-6">
-              <label class="control-label">Số lượng</label>
-            <input class="form-control" type="number" required="" value="20">
-          </div>
+          <div class="form-group col-md-6">
+            <label class="control-label">Maximum number of guests</label>
+          <input class="form-control" type="text" required="" value="4">
+        </div>
           <div class="form-group col-md-6 ">
-              <label for="exampleSelect1" class="control-label">Tình trạng sản phẩm</label>
+              <label for="exampleSelect1" class="control-label">Status</label>
               <select class="form-control" id="exampleSelect1">
-                <option>Còn hàng</option>
-                <option>Hết hàng</option>
-                <option>Đang nhập hàng</option>
+                <option>Rent</option>
+                <option>Room Available</option>
+                <option>Cleaning up</option>
               </select>
             </div>
             <div class="form-group col-md-6">
-              <label class="control-label">Giá bán</label>
+              <label class="control-label">Price</label>
               <input class="form-control" type="text" value="5.600.000">
             </div>
             <div class="form-group col-md-6">
-              <label for="exampleSelect1" class="control-label">Danh mục</label>
+              <label for="exampleSelect1" class="control-label">Kind of room</label>
               <select class="form-control" id="exampleSelect1">
-                <option>Bàn ăn</option>
-                <option>Bàn thông minh</option>
-                <option>Tủ</option>
-                <option>Ghế gỗ</option>
-                <option>Ghế sắt</option>
-                <option>Giường người lớn</option>
-                <option>Giường trẻ em</option>
-                <option>Bàn trang điểm</option>
-                <option>Giá đỡ</option>
+                <!-- <option value="">Choose a Room from the List</option> -->
+                <option value="connecting">Normal room</option>
+                <option value="adjoining">Family's room</option>
+                <option value="adjacent">Single room</option>
+                <option value="adjacent">Double room</option>
+                <option value="adjacent">Deluxe Room</option>
               </select>
             </div>
         </div>
         <br>
         <a href="#" style="    float: right;
       font-weight: 600;
-      color: #ea0000;">Chỉnh sửa sản phẩm nâng cao</a>
+      color: #ea0000;">Advanced Editing</a>
         <br>
         <br>
-        <button class="btn btn-save" type="button">Lưu lại</button>
-        <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
+        <button class="btn btn-save" type="button">Save</button>
+        <a class="btn btn-cancel" data-dismiss="modal" href="#">Cancel</a>
         <br>
       </div>
       <div class="modal-footer">

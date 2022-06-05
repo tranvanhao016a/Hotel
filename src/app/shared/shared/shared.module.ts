@@ -1,27 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbarComponent } from 'src/app/components/nbar/nbar.component';
+
 import { FootherComponent } from 'src/app/components/foother/foother.component';
 import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
 import { HeaderAdminComponent } from 'src/app/components/header-admin/header-admin.component';
-
+import { NbarComponent } from 'src/app/components/nbar/nbar.component';
 
 
 @NgModule({
-  declarations: [    
+  declarations: [
     NbarComponent,
     FootherComponent,
-    SidebarComponent,    
-    HeaderAdminComponent,
+    SidebarComponent,
+    HeaderAdminComponent
+
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports:[
     NbarComponent,
     FootherComponent,
     SidebarComponent,
-    HeaderAdminComponent,
+    HeaderAdminComponent
   ],
   providers: [],
   bootstrap: []

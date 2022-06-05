@@ -6,10 +6,14 @@
   <main class="app-content">
     <div class="app-title">
       <ul class="app-breadcrumb breadcrumb side">
-        <li class="breadcrumb-item active"><a href="#"><b>Danh sách phiếu phòng</b></a></li>
+        <li class="breadcrumb-item active"><a href="#"><b>List of room vouchers</b></a></li>
       </ul>
       <div id="clock"></div>
     </div>
+    <!-- <div class="col-sm-2">
+      <a class="btn btn-add btn-sm" (click)="navigate('/add-staff')" title="Thêm"><i class="fas fa-plus"></i>
+        Create a new staff</a>
+    </div> -->
     <div class="row">
       <div class="col-md-12">
         <div class="tile">
@@ -18,17 +22,17 @@
               <thead>
                 <tr>
                   <th width="10"><input type="checkbox" id="all" onclick="checkbox()"></th>
-                  <th>Mã phiếu phòng</th>
-                  <th>Tên nhân viên lập</th>
-                  <th>Số phòng</th>
-                  <th>SDT khách hàng</th>
-                  <th> Ngày đặt</th>
-                  <th> Ngày trả</th>
-                  <th> Số lượng khách hàng</th>
-                  <th>Dịch vụ</th>
-                  <th>Tổng tiền</th>
-                  <th>Tình trạng</th>
-                  <th width="100">Tính năng</th>
+                  <th>Room voucher code</th>
+                  <th>Staff's name</th>
+                  <th>Room code</th>
+                  <th>SĐT customer</th>
+                  <th> Check-in Date</th>
+                  <th> Check-out Date</th>
+                  <th> Customers number</th>
+                  <th>Service</th>
+                  <th>Total money</th>
+                  <th>Status</th>
+                  <th width="100">Feature</th>
                 </tr>
               </thead>
               <tbody>
@@ -41,9 +45,9 @@
                   <td>15/02/2022</td>
                   <td>18/02/2022 </td>
                   <td>4</td>
-                  <td>Ăn uống, Spa</td>
+                  <td>Eating, Spa</td>
                   <td>2.500.000 đ</td>
-                  <td><span class="badge bg-success">Thanh toán</span></td>
+                  <td><span class="badge bg-success">Pay</span></td>
                   <td class="table-td-center">
                     <button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
                       onclick="myFunction()"><i class="fas fa-trash-alt"></i>
@@ -55,16 +59,16 @@
                 </tr>
                 <tr>
                   <td width="10"><input type="checkbox" name="check2" value="2"></td>
-                  <td  >MĐ8265</td>
+                  <td >MĐ8265</td>
                   <td>Nguyễn Thị Ngọc Cẩm</td>
                   <td>203</td>
                   <td>001278288282</td>
                   <td>25/07/2022</td>
                   <td>30/07/2022 </td>
                   <td>2</td>
-                  <td>Ăn uống, Spa</td>
+                  <td>Pool, Spa</td>
                   <td>3.800.000 đ</td>          
-                  <td><span class="badge bg-success">Thanh toán</span></td>
+                  <td><span class="badge bg-success">Pay</span></td>
                   <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
                       onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
                     </button>
@@ -82,9 +86,9 @@
                   <td>01/01/2022</td>
                   <td>01/01/2022 </td>
                   <td>3 </td>
-                  <td>Ăn uống, Spa</td>
+                  <td>Pool, Spa</td>
                   <td>4.650.000 đ</td>
-                  <td><span class="badge bg-warning">Chưa thanh toán</span></td>
+                  <td><span class="badge bg-warning">Unpaid</span></td>
                   <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction()"><i
                         class="fas fa-trash-alt"></i>
                     </button>
